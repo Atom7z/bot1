@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram Bot
+After=network.target
+
+[Service]
+User=jcb
+Group=jcb
+
+WorkingDirectory=/home/vladimir/tele_bot/
+Environment="PYTHONPATH=/home/jcb/bot1"
+ExecStart=/home/jcb/bot1/.venv/bin/python /home/jcb/bot1/bot1.py
+
+[Install]
+WantedBy=multi-user.target
